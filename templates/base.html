@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AppleStore</title>
+    {% load static %}
+    <link rel="shortcut icon" href="{% static "images/76732.png" %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'Bootstrap/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'Bootstrap/css/main.css' %}">
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <p1><img src="{% static "images/logo_apple.png" %}" width="23" height="25"/></p1>
+                <a class="navbar-brand" href="#">AppleStore</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{% url 'main_url' %}">На главную </a></li>
+                    <li><a href="{% url 'orders_url' %}">Заказы</a></li>
+                    <li><a href="{% url 'db_url' %}">Работа с БД</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% block body1 %}{% endblock %}
+</body>
+</html>
